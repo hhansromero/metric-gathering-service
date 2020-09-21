@@ -12,7 +12,7 @@ The web application is based in microservices arquitecture for backend and has a
 - springboot-service-gathering-metric: It traces request and respones and persist these information in a database in memory
 
 ## Frontend Component
--- react-api: It contains a page to load the business data (Company Entity) and metric data collected (Metric List and Metric Summary)
+- react-api: It contains a page to load the business data (Company Entity) and metric data collected (Metric List and Metric Summary)
 
 ## Start Projects
 1. Download backend projects.
@@ -36,15 +36,15 @@ The web application is based in microservices arquitecture for backend and has a
 	
 4. Download React Project (react-api) in a separate folder.
    Steps:
-   4.1 Create a new folder
-   4.2 Start a npm window
-   4.2 Execute: npm i create-react-app
-   4.3 Execute: npx create-react-app react-api
-   4.4 Replace the "src" created in step 4.3 with "src" folder downloaded in the step 4
-   4.5 Execute (inside of react-api): npm start
+   - 4.1 Create a new folder
+   - 4.2 Start a npm window
+   - 4.2 Execute: npm i create-react-app
+   - 4.3 Execute: npx create-react-app react-api
+   - 4.4 Replace the "src" created in step 4.3 with "src" folder downloaded in the step 4
+   - 4.5 Execute (inside of react-api): npm start
 5. It will start up a browser in http://localhost:3000/
    The default page constains:
-   *A list of companies created by default (you can add more records using a REST Client).
-   *You can use the "List Companies" button to collect metrics.
-   *You can use "Refresh Metrics" button to see metrics updated.
+   * A list of companies created by default (you can add more records using a REST Client).
+   * You can use the "List Companies" button to collect metrics.
+   * You can use "Refresh Metrics" button to see metrics updated.
 	
