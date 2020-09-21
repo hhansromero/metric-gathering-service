@@ -5,6 +5,7 @@ It is a service to handle metrics about HTTP request and responses in a web appl
 The web application is based in microservices arquitecture for backend and has a frontend module based in React.
 
 ## Backend Components
+-- springboot-service-commons: Java Library with business entities (Spring DATA JPA)
 -- springboot-service-config-server: Contains configuration based in Spring Cloud Config Server
 -- springboot-service-eureka-server: It manages the auto discovery of services
 -- springboot-service-company-setting: It has businees logic used to map the metrics
@@ -15,7 +16,8 @@ The web application is based in microservices arquitecture for backend and has a
 
 ## Start Projects
 1. Download backend projects.
-2. Startup each microservice in the following order: config-server, eureka-server, company-setting and gathering-metric.
+2. Execute command "mvnw.cmd install" at the root path of springboot-service-commons in order to install the library in local maven.
+3. Startup each microservice in the following order: config-server, eureka-server, company-setting and gathering-metric.
    At this time you can test every available resources on company-setting and gathering-metric.
    Examples:
     * POST: localhost:8002/gathering/company
@@ -32,9 +34,9 @@ The web application is based in microservices arquitecture for backend and has a
 	* GET: localhost:8002/metrics
 	* GET: localhost:8002/metrics/summary
 	
-3. Download React Project.
-4. Go to the root path of react-api/ and execute from a npm console "npm start" (example: git bash).
-5. It will start up a browser in http://localhost:3000/
+4. Download React Project.
+5. Go to the root path of react-api/ and execute from a npm console "npm start" (example: git bash).
+6. It will start up a browser in http://localhost:3000/
    The default page constains:
    *A list of companies created by default (you can add more records using a REST Client).
    *You can use the "List Companies" button to collect metrics.
