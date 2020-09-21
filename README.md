@@ -42,8 +42,7 @@ The web application is based in microservices arquitecture for backend and has a
    - 4.3 Execute: npx create-react-app react-api
    - 4.4 Replace the "src" created in step 4.3 with "src" folder downloaded in the step 4
    - 4.5 Execute (inside of react-api): npm start
-5. It will start up a browser in http://localhost:3000/
-   The default page constains:
+5. It will start up a browser in http://localhost:3000/. The default page constains:
    * A list of companies created by default (you can add more records using a REST Client).
    * You can use the "List Companies" button to collect metrics.
    * You can use "Refresh Metrics" button to see metrics updated.
