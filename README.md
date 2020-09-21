@@ -34,9 +34,15 @@ The web application is based in microservices arquitecture for backend and has a
 	* GET: localhost:8002/metrics
 	* GET: localhost:8002/metrics/summary
 	
-4. Download React Project.
-5. Go to the root path of react-api/ and execute from a npm console "npm start" (example: git bash).
-6. It will start up a browser in http://localhost:3000/
+4. Download React Project (react-api) in a separate folder.
+   Steps:
+   4.1 Create a new folder
+   4.2 Start a npm window
+   4.2 Execute: npm i create-react-app
+   4.3 Execute: npx create-react-app react-api
+   4.4 Replace the "src" created in step 4.3 with "src" folder downloaded in the step 4
+   4.5 Execute (inside of react-api): npm start
+5. It will start up a browser in http://localhost:3000/
    The default page constains:
    *A list of companies created by default (you can add more records using a REST Client).
    *You can use the "List Companies" button to collect metrics.
