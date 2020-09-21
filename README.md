@@ -5,11 +5,11 @@ It is a service to handle metrics about HTTP request and responses in a web appl
 The web application is based in microservices arquitecture for backend and has a frontend module based in React.
 
 ## Backend Components
-*springboot-service-commons: Java Library with business entities (Spring DATA JPA)
-*springboot-service-config-server: Contains configuration based in Spring Cloud Config Server
-*springboot-service-eureka-server: It manages the auto discovery of services
-*springboot-service-company-setting: It has businees logic used to map the metrics
-*springboot-service-gathering-metric: It traces request and respones and persist these information in a database in memory
+- springboot-service-commons: Java Library with business entities (Spring DATA JPA)
+- springboot-service-config-server: Contains configuration based in Spring Cloud Config Server
+- springboot-service-eureka-server: It manages the auto discovery of services
+- springboot-service-company-setting: It has businees logic used to map the metrics
+- springboot-service-gathering-metric: It traces request and respones and persist these information in a database in memory
 
 ## Frontend Component
 -- react-api: It contains a page to load the business data (Company Entity) and metric data collected (Metric List and Metric Summary)
