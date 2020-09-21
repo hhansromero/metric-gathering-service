@@ -1,0 +1,12 @@
+com\su\springboot\app\commons\models\entity\Person.class
+com\su\springboot\app\commons\models\entity\Client.class
+com\su\springboot\app\commons\models\entity\audit\Auditable.class
+com\su\springboot\app\commons\models\entity\User.class
+com\su\springboot\app\commons\models\entity\BookingOrder.class
+com\su\springboot\app\commons\models\entity\Company.class
+com\su\springboot\app\commons\models\entity\Camp.class
+com\su\springboot\app\commons\models\entity\Club.class
+com\su\springboot\app\commons\models\entity\Category.class
+com\su\springboot\app\commons\models\entity\Role.class
+com\su\springboot\app\commons\models\entity\Address.class
+com\su\springboot\app\commons\SpringbootServiceCommonsApplication.class
