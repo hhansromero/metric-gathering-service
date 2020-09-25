@@ -12,7 +12,8 @@ The web application is based in microservices arquitecture for backend and has a
 - springboot-service-metric-gathering: Java Library created in order to logging the HTTP responses by interceptors. Besides, It contains services and entities to persist metrics
 
 ## Frontend Component
-- react-api: It contains a page to load the business data (Company Entity) and metric data collected (Metric List and Metric Summary)
+- webreact: It contains a page to load the business data (Company Entity) and metric data collected (Metric List and Metric Summary)
+  ** src folder
 
 ## Start Projects
 1. Download backend projects.
@@ -35,7 +36,7 @@ The web application is based in microservices arquitecture for backend and has a
 	* GET: localhost:8001/gathering/metrics
 	* GET: localhost:8001/gathering/metrics/summary
 	
-5. Download React Project (react-api) in a separate folder of your preference.
+5. Download "webreact" in a separate folder of your preference.
    Steps to run:
    - 5.1 Create a new folder
    - 5.2 Start a npm window at the root of the new folder
