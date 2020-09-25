@@ -19,31 +19,31 @@ The web application is based in microservices arquitecture for backend and has a
 2. Execute command "mvnw.cmd install" at the root path of "springboot-service-commons" in order to install the library in local maven.
 3. Execute command "mvnw.cmd install" at the root path of "springboot-service-metric-gathering" in order to install the library in local maven.
 4. Startup each microservice in the following order: config-server, eureka-server and company-setting.
-   At this time you can test every available resources on company-setting and gathering-metric.
+   At this time you can test every available resources on company-setting service and these should log the metrics about them.
    Examples:
-    * POST: localhost:8002/gathering/company
+        * POST: localhost:8001/company/create
 	{
 		"name": "Sporting Cristal Camp",
 		"ruc": "12345678901",
 		"image": "IMAGE base 64",
 		"createdBy": "1"
 	}
-	* GET: localhost:8002/gathering/company
+	* GET: localhost:8002/company/list
 	
-	Each endpoint is able to save metrics of call in a H2 databse (in memory).
+	Each endpoint is able to save metrics of calls in a H2 database (in memory).
 	If you want to see the metrics collected you can use the following endpoints:
-	* GET: localhost:8002/metrics
-	* GET: localhost:8002/metrics/summary
+	* GET: localhost:8001/gathering/metrics
+	* GET: localhost:8001/gathering/metrics/summary
 	
-4. Download React Project (react-api) in a separate folder.
-   Steps:
-   - 4.1 Create a new folder
-   - 4.2 Start a npm window
-   - 4.2 Execute: npm i create-react-app
-   - 4.3 Execute: npx create-react-app react-api
-   - 4.4 Replace the "src" created in step 4.3 with "src" folder downloaded in the step 4
-   - 4.5 Execute (inside of react-api): npm start
-5. It will start up a browser in http://localhost:3000/. The default page constains:
+5. Download React Project (react-api) in a separate folder of your preference.
+   Steps to run:
+   - 5.1 Create a new folder
+   - 5.2 Start a npm window at the root of the new folder
+   - 5.2 Execute: npm i create-react-app
+   - 5.3 Execute: npx create-react-app react-api
+   - 5.4 Replace the "src" created in step 5.3 with "src" folder downloaded in the step 5
+   - 5.5 Execute (at the root of react-api): npm start
+6. It will start up a browser in http://localhost:3000/. The default page constains:
    * A list of companies created by default (you can add more records using a REST Client).
    * You can use the "List Companies" button to collect metrics.
    * You can use "Refresh Metrics" button to see metrics updated.
