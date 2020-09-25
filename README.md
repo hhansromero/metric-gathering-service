@@ -5,19 +5,20 @@ It is a service to handle metrics about HTTP request and responses in a web appl
 The web application is based in microservices arquitecture for backend and has a frontend module based in React.
 
 ## Backend Components
-- springboot-service-commons: Java Library with business entities (Spring DATA JPA)
-- springboot-service-config-server: Contains configuration based in Spring Cloud Config Server
-- springboot-service-eureka-server: It manages the auto discovery of services
-- springboot-service-company-setting: It has businees logic used to map the metrics
-- springboot-service-gathering-metric: It traces request and respones and persist these information in a database in memory
+- springboot-service-commons: Java Library that contains business entities (Spring DATA JPA) of the web application
+- springboot-service-config-server: Contains configuration based in Spring Cloud Config Server (Web application configuration)
+- springboot-service-eureka-server: It manages the auto discovery of services (Web application is registered in this server)
+- springboot-service-company-setting: It has business logic of the web application
+- springboot-service-metric-gathering: Java Library created in order to logging the HTTP responses by interceptors. Besides, It contains services and entities to persist metrics
 
 ## Frontend Component
 - react-api: It contains a page to load the business data (Company Entity) and metric data collected (Metric List and Metric Summary)
 
 ## Start Projects
 1. Download backend projects.
-2. Execute command "mvnw.cmd install" at the root path of springboot-service-commons in order to install the library in local maven.
-3. Startup each microservice in the following order: config-server, eureka-server, company-setting and gathering-metric.
+2. Execute command "mvnw.cmd install" at the root path of "springboot-service-commons" in order to install the library in local maven.
+3. Execute command "mvnw.cmd install" at the root path of "springboot-service-metric-gathering" in order to install the library in local maven.
+4. Startup each microservice in the following order: config-server, eureka-server and company-setting.
    At this time you can test every available resources on company-setting and gathering-metric.
    Examples:
     * POST: localhost:8002/gathering/company
