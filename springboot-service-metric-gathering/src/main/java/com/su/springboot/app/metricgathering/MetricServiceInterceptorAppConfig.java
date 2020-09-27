@@ -8,9 +8,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import com.su.springboot.app.metricgathering.models.service.impl.MetricServiceInterceptor;
 
 /**
- * This class is a component to enable interceptors of the gathering-metric library
+ * This is a config class to add our interceptors. This class implements WebMvcConfigurer which adds the interceptor within the addInterceptors method
  * Interceptors can be registered to apply to all requests or be limited to a subset of URL patterns
- * You need to enable interceptors for consumers, producers and others applications to fetch the metrics
+ * In this library the interceptor is used to fetch metrics
  * Metrics include counts data to log the latency of our ecosystem
  *
  * The events of lifecycle interceptors for pre- and post-processing of controller method invocations are located in:
