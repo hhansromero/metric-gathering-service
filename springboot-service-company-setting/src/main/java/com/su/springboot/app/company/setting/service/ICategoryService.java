@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.su.springboot.app.commons.models.entity.Category;
 
+/**
+ * Generate Category interface
+ * @author hector.romero
+ */
 public interface ICategoryService {
 
 	public List<Category> findAll();

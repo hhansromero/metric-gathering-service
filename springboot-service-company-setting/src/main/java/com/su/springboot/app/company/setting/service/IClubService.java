@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.su.springboot.app.commons.models.entity.Club;
 
+/**
+ * Generate Club interface
+ * @author hector.romero
+ */
 public interface IClubService {
 
 	public List<Club> findAll();

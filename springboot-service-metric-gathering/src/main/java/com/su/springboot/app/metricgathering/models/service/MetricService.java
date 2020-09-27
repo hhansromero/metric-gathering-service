@@ -4,6 +4,11 @@ import java.util.List;
 
 import com.su.springboot.app.metricgathering.models.entity.Metric;
 
+/**
+ * Generate Metric interface
+ * Containing basic methods to handle main operations
+ * @author hector.romero
+ */
 public interface MetricService {
 
 	public List<Metric> findAll();

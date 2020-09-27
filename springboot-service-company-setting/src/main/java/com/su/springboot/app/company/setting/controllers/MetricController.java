@@ -14,6 +14,16 @@ import com.su.springboot.app.metricgathering.models.entity.Metric;
 import com.su.springboot.app.metricgathering.models.entity.MetricSummary;
 import com.su.springboot.app.metricgathering.models.service.MetricService;
 
+/**
+ * MetricController is a controller class that handles for MetricService methods
+ * This class was added in order to get metrics collected on HTTP lifecycle of the web application
+ * It is the only class added explicitly and the goal is expose metrics
+ * It is considered as a extension controller of the web application
+ * For more details please see:
+ * {@link com.su.springboot.app.metricgathering.models.entity.Metric} class
+ * {@link com.su.springboot.app.metricgathering.models.entity.MetricSummary} class
+ * @author hector.romero
+ */
 @RestController
 @RequestMapping("gathering")
 public class MetricController {
@@ -21,12 +31,26 @@ public class MetricController {
 	@Autowired
 	private MetricService metricService;
 
+	/**
+	 * <p>This is a method to get all metrics collected
+	 *    A method of MetricServic interface of gathering-metric library is used
+	 * </p>
+	 * @return a list of metrics
+	 * @since 1.0
+	 */
 	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/metrics")
 	public ResponseEntity<?> findAllMetrics() {     
 		return ResponseEntity.ok(metricService.findAll());
 	}
-	
+
+	/**
+	 * <p>This is a method to get a summary of metrics collected
+	 *    A method of MetricServic interface of gathering-metric library is used
+	 * </p>
+	 * @return a MetricSummary object filled
+	 * @since 1.0
+	 */
 	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/metrics/summary")
 	public ResponseEntity<?> findMetricsSummary() {

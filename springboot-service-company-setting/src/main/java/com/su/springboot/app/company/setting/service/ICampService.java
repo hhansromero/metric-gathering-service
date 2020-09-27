@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.su.springboot.app.commons.models.entity.Camp;
 
+/**
+ * Generate Camp interface
+ * @author hector.romero
+ */
 public interface ICampService {
 
 	public List<Camp> findAll();
